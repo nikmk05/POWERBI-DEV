@@ -8,8 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
-steps:
+Steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: Staging artifact'
   inputs:
@@ -22,5 +21,5 @@ steps:
   inputs:
     CopyRoot: '$(Build.ArtifactStagingDirectory)'
     Contents: '*.pbix*'
-    ArtifactName: POWERBI-CI
+    ArtifactName: BIOPS
     ArtifactType: Container
